@@ -47,6 +47,10 @@ jobs:
       - name: Smoke test
         working-directory: src
         run: dist\BreezyVideo\BreezyVideo.exe --run-python "import breezy, sys; print(breezy.__version__); sys.exit(0)"
+      - name: Install NSIS
+        run: |
+          choco install nsis -y --no-progress
+          echo "C:\Program Files (x86)\NSIS" >> $env:GITHUB_PATH
       - name: Build the installer and update files
         working-directory: src
         env:
