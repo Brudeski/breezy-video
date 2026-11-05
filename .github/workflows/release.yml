@@ -1,0 +1,68 @@
+# This workflow lives in the PUBLIC releases repository (Brudeski/breezy-video). It fetches the source from the
+# private repository with a read-only deploy key, builds Breezy on Windows, and publishes a GitHub Release with
+# the installer and the update zip, plus latest.json in this repository (what installed copies read).
+# Start it from the Actions tab ("Run workflow"); it builds the source repository's main branch (or the branch
+# you name) and names the release after the version in breezy/__init__.py.
+name: release
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Branch or commit of the source repository to build"
+        required: true
+        default: main
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { path: pub }
+      - name: Fetch the source
+        shell: bash
+        env:
+          DEPLOY_KEY: ${{ secrets.SOURCE_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh && echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git clone --depth 1 --branch "${{ github.event.inputs.ref }}" git@github.com:Brudeski/breezy-video-src.git src
+      - name: Read the version
+        id: ver
+        shell: bash
+        working-directory: src
+        run: echo "tag=v$(python -c "import re;print(re.search(r'__version__ = \"([^\"]+)\"', open('breezy/__init__.py').read()).group(1))")" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Install components
+        working-directory: src
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt --only-binary av
+          python -m pip install --no-deps -r requirements-nodeps.txt
+          python -m pip install pyinstaller
+      - name: Build the .exe
+        working-directory: src
+        run: pyinstaller --noconfirm breezy.spec
+      - name: Smoke test
+        working-directory: src
+        run: dist\BreezyVideo\BreezyVideo.exe --run-python "import breezy, sys; print(breezy.__version__); sys.exit(0)"
+      - name: Build the installer and update files
+        working-directory: src
+        env:
+          RELEASE_ASSET_BASE: https://github.com/${{ github.repository }}/releases/download/${{ steps.ver.outputs.tag }}
+        run: python tools/make_release.py release dist/BreezyVideo
+      - name: Publish the release
+        working-directory: src
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          ver=$(python -c "import json;print(json.load(open('release/latest.json'))['version'])")
+          notes=$(python -c "import json;print('\n'.join('- '+n for n in json.load(open('release/latest.json'))['notes']))")
+          gh release create "${{ steps.ver.outputs.tag }}" release/installers/* release/updates/* \
+            --repo "${{ github.repository }}" --title "Breezy Video $ver" --notes "$notes"
+          cp release/latest.json ../pub/latest.json
+          cd ../pub
+          git config user.name "breezy-release" && git config user.email "release@breezy.local"
+          git add latest.json && git commit -m "Release $ver" && git push
