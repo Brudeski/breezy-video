@@ -1,0 +1,15 @@
+{
+ "version": "0.23.0",
+ "notes": [
+  "New page: Pipelines - save several steps under one name (e.g. Trim Ends, then Stabilizer, then Enhance) and run them on videos with one click. Each step keeps the settings its page had when you added it ('Update from its page' to change them). In-between files are deleted when done, or kept if you tick 'Keep the in-between files'.",
+  "Watch folders (Settings): new videos in a folder are run through a pipeline automatically - only once they've finished copying. Breezy can start with Windows and keeps running in the tray while it watches (right-click the tray icon to pause or quit).",
+  "New 'When done' button in the bottom bar: close Breezy, sleep, hibernate or shut down the PC when every task is finished (60-second countdown; once). 'Close Breezy' is new.",
+  "Updates: Breezy looks for new versions once a day (Settings → Updates) and installs them when you say so - downloaded from GitHub, checked, with a backup of the old version.",
+  "There is now a Windows installer for other PCs (no administrator rights needed).",
+  "Only one Breezy runs at a time: starting it again brings the running one to the front."
+ ],
+ "update": "updates/breezy-update-0.23.0.zip",
+ "sha256": "40bf6806de5216fedf34978cd459ec6745f719ee09d51cb0987ffa13f4711baf",
+ "installer": "installers/BreezyVideoSetup-0.23.0.exe",
+ "installer_sha256": "a2d9140b88883edb81f19c4991453f76474c78d7c97800d4ef6f8d55c182e3a2"
+}
