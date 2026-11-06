@@ -1,10 +1,10 @@
 {
- "version": "0.28.1",
+ "version": "0.28.2",
  "notes": [
-  "Built program: the NVIDIA engine (CUDA / TensorRT) now works in it too. It lives in the app's data folder (ai-cuda), so updates keep it."
+  "Built program: all pages now show (Videos, Pipelines, Stabilizer, Rotate & Crop, Subtitles, Duplicates, Organise, Tasks and Settings were missing)."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.1/breezy-update-0.28.1.zip",
- "sha256": "32d9685d3401bb1447d7e31248467fde2c914a3619feff6aec21695187bc6fd6",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.1/BreezyVideoSetup-0.28.1.exe",
- "installer_sha256": "8264124cbe13c60c4fb236795f2d94887c8bbd996054c1adc03b841d12c70065"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.2/breezy-update-0.28.2.zip",
+ "sha256": "024fe3a6d7bb1f230ef3e5d374c6217a13263d40230dc7f5c5cc6280bd023dab",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.2/BreezyVideoSetup-0.28.2.exe",
+ "installer_sha256": "9cde1f55f647b906d82924e646dff39cae94c5da2131da7a3e0ffff7804c3228"
 }
