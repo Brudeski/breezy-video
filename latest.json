@@ -1,10 +1,10 @@
 {
- "version": "0.28.2",
+ "version": "0.28.3",
  "notes": [
-  "Built program: all pages now show (Videos, Pipelines, Stabilizer, Rotate & Crop, Subtitles, Duplicates, Organise, Tasks and Settings were missing)."
+  "The installer closes a running Breezy before replacing its files (it could stop with 'Error opening file for writing')."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.2/breezy-update-0.28.2.zip",
- "sha256": "024fe3a6d7bb1f230ef3e5d374c6217a13263d40230dc7f5c5cc6280bd023dab",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.2/BreezyVideoSetup-0.28.2.exe",
- "installer_sha256": "9cde1f55f647b906d82924e646dff39cae94c5da2131da7a3e0ffff7804c3228"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.3/breezy-update-0.28.3.zip",
+ "sha256": "576ef4e9d602df6ba34bbd2c18e2fd54037fd95a82d84b450dedc0f99cc605fa",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.3/BreezyVideoSetup-0.28.3.exe",
+ "installer_sha256": "e12a1ca8ef3eceddf0c0243cbb043f50f536fc259c4f9004b6cf2042a2fc8985"
 }
