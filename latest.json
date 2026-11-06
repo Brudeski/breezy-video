@@ -1,12 +1,10 @@
 {
- "version": "0.28.0",
+ "version": "0.28.1",
  "notes": [
-  "Breezy is now built as a single program with Python inside: the installer needs no setup step, and FFmpeg and the AI models are downloaded the first time a feature needs them (they live in the app's data folder, so updates never remove them).",
-  "Updates for the built program: the new installer is downloaded, checked, and run quietly when you close Breezy; it starts again by itself. Existing script-based installs keep updating as before.",
-  "Releases are built automatically on GitHub."
+  "Built program: the NVIDIA engine (CUDA / TensorRT) now works in it too. It lives in the app's data folder (ai-cuda), so updates keep it."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.0/breezy-update-0.28.0.zip",
- "sha256": "a5bf34806df052b49065d9656bd744d97d7707d2a10daf772e729a32ebb8b64a",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.0/BreezyVideoSetup-0.28.0.exe",
- "installer_sha256": "d4aed7238ee324d02766af7a3ada6db97be052d1c97e4a49afc6a2628e944529"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.1/breezy-update-0.28.1.zip",
+ "sha256": "32d9685d3401bb1447d7e31248467fde2c914a3619feff6aec21695187bc6fd6",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.1/BreezyVideoSetup-0.28.1.exe",
+ "installer_sha256": "8264124cbe13c60c4fb236795f2d94887c8bbd996054c1adc03b841d12c70065"
 }
