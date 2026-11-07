@@ -1,10 +1,10 @@
 {
- "version": "0.28.3",
+ "version": "0.28.4",
  "notes": [
-  "The installer closes a running Breezy before replacing its files (it could stop with 'Error opening file for writing')."
+  "Updates: fixed 'refusing to follow a redirect to release-assets.githubusercontent.com' - GitHub moved its download server (the file is still checked against its checksum)."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.3/breezy-update-0.28.3.zip",
- "sha256": "576ef4e9d602df6ba34bbd2c18e2fd54037fd95a82d84b450dedc0f99cc605fa",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.3/BreezyVideoSetup-0.28.3.exe",
- "installer_sha256": "e12a1ca8ef3eceddf0c0243cbb043f50f536fc259c4f9004b6cf2042a2fc8985"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.4/breezy-update-0.28.4.zip",
+ "sha256": "97626e8e2253cf0af27d0614809490d11100d9ab14c1b895bb7a70dfd3d7b2e6",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.28.4/BreezyVideoSetup-0.28.4.exe",
+ "installer_sha256": "af1d4d59e3b2eb512ab7a2c575b5f0ef006e5c50ab262c71d2fd746cdc4e598d"
 }
