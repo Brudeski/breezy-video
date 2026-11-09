@@ -1,10 +1,13 @@
 {
- "version": "0.30.3",
+ "version": "0.31.0",
  "notes": [
-  "Updates from inside Breezy: the installer is now started directly - it waits for Breezy to close, installs and starts Breezy again. The helper script used before could get stuck in a console window, so updates downloaded but never installed."
+  "Duplicates: 'Keep copies in these folders first' - a list of folders in order of preference; in each set the copy in the first listed folder is kept (otherwise the best copy). Right-click a copy: 'Keep copies in this folder for every set'. New 'Compare…' plays a copy side by side with the kept one.",
+  "Subject Tracker: long videos are made in 1-minute parts - a stopped or interrupted video continues after the last finished part instead of starting again.",
+  "Subject Tracker: faster - frames are cropped on several processor cores with fewer copies, and finding subjects decodes and shrinks the video on NVIDIA graphics cards while the AI looks at the previous frame.",
+  "Enhance: 'AI denoise only when the video is noisy' - each video is checked and clean ones skip the slow AI denoise. Settings > AI engine: whether the quality levels with AI denoise use it on every video or only on noisy ones."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.3/breezy-update-0.30.3.zip",
- "sha256": "419d08c494443a4db47c49504858d275b23093694e238c387cdb9726659166c6",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.3/BreezyVideoSetup-0.30.3.exe",
- "installer_sha256": "4b5eb07eb9279ea96f0f344d4674d3c1bbd5e08e56e05e4ac9f85f51d6d2ac5f"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.31.0/breezy-update-0.31.0.zip",
+ "sha256": "9b36d82eca14e41f68cdda0f4c12edca6f351c66e6933b4106a5a4f225e31188",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.31.0/BreezyVideoSetup-0.31.0.exe",
+ "installer_sha256": "af30b04462c63883293047a3b1e361f0dc7e782397079f2f8b4ce707d738b4b6"
 }
