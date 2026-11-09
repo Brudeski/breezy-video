@@ -51,6 +51,12 @@ jobs:
           $p = Start-Process dist\BreezyVideo\BreezyVideo.exe -ArgumentList '--run-python',"exec(open('tools/smoke_test.py').read())" -Wait -PassThru
           Get-Content smoke.txt
           if ($p.ExitCode -ne 0) { throw "smoke test failed ($($p.ExitCode))" }
+          Start-Sleep -Seconds 3
+          $m = Select-String -Path smoke.txt -Pattern '^child (\d+)'
+          if (-not $m) { throw "smoke test: no child process line" }
+          $cid = [int]$m.Matches[0].Groups[1].Value
+          if (Get-Process -Id $cid -ErrorAction SilentlyContinue) { Stop-Process -Id $cid -Force; throw "a program started by Breezy kept running after Breezy ended" }
+          "child $cid ended with Breezy - ok"
       - name: Install NSIS
         run: |
           choco install nsis -y --no-progress
