@@ -1,12 +1,11 @@
 {
- "version": "0.29.0",
+ "version": "0.29.1",
  "notes": [
-  "'Delete originals after conversion' in the Output card of every page (off until you tick it; each page remembers it). Each original goes to the Recycle Bin once its new video is made - only if nothing went wrong for that video and the new file can be read, has a length and a picture. A video that only got an .srt/.csv (or nothing) is kept. If a file can't go to the Recycle Bin (too big, or a drive without one), Windows asks before deleting it for good.",
-  "Videos page: the checkbox removes each original after its last action.",
-  "Pipelines: new 'Originals' choice per pipeline - keep them, or move them to the Recycle Bin after the last step (watch folders use the pipeline's choice). The steps in between never delete anything."
+  "Duplicates: matching the footage of big collections is now hundreds of times faster (24,000 videos: seconds instead of hours) and shows its own progress ('Matching footage'), instead of sitting at '0s left'.",
+  "Duplicates / Organise: every video's fingerprint is now remembered (it used to forget all but 15,000, so big folders were partly re-read on every scan), and the cache file is about half the size."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.29.0/breezy-update-0.29.0.zip",
- "sha256": "8925bdd1a3f2b4a7eddc5e274223d67921adc8117b782200420c877b5b4c4d1e",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.29.0/BreezyVideoSetup-0.29.0.exe",
- "installer_sha256": "a3bcf85c0404d2efa82338badbbadfba36790d597e8ee73f5000e22dfbc41a5b"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.29.1/breezy-update-0.29.1.zip",
+ "sha256": "83d3039904972e1d4ef0151e41b88a7b16d4c842fda6ab97b0cdc97a876f7f00",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.29.1/BreezyVideoSetup-0.29.1.exe",
+ "installer_sha256": "29ae4030ef3c313d0bb4c20c2cdd64ba1284cfcb6bd0ea5786a96baab84198f9"
 }
