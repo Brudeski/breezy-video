@@ -1,11 +1,10 @@
 {
- "version": "0.30.2",
+ "version": "0.30.3",
  "notes": [
-  "Programs Breezy starts (encoders, decoders, the preview player) now end together with Breezy, also when it's closed by force or by an installer. Before, an encoder could keep running in the background and keep its file locked, so a restarted job failed with 'The process cannot access the file because it is being used by another process'.",
-  "Every run writes to its own temporary file, and saving a finished file retries for a few seconds if Windows reports it in use."
+  "Updates from inside Breezy: the installer is now started directly - it waits for Breezy to close, installs and starts Breezy again. The helper script used before could get stuck in a console window, so updates downloaded but never installed."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.2/breezy-update-0.30.2.zip",
- "sha256": "d78c324896ede5a4865deaf2a0e83052cffcd7fdfed9089d0a45f075037191d0",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.2/BreezyVideoSetup-0.30.2.exe",
- "installer_sha256": "c93fb2a8d1c2a434b5fa2e4fcc5248f74e69cf09be915e4737e865c0b35ce0ef"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.3/breezy-update-0.30.3.zip",
+ "sha256": "419d08c494443a4db47c49504858d275b23093694e238c387cdb9726659166c6",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.3/BreezyVideoSetup-0.30.3.exe",
+ "installer_sha256": "4b5eb07eb9279ea96f0f344d4674d3c1bbd5e08e56e05e4ac9f85f51d6d2ac5f"
 }
