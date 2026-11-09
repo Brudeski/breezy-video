@@ -1,12 +1,10 @@
 {
- "version": "0.30.0",
+ "version": "0.30.1",
  "notes": [
-  "Duplicates: 'same footage' is much stricter. Different minutes of a fixed camera (security, dash or trail cams) were grouped as copies because the small fingerprint can't tell them apart. Possible matches are now checked more closely - what moves between frames, and sharper pictures that catch a changed on-screen clock or a small object - so only real re-encoded or resized copies match.",
-  "Duplicates: no more chains - every copy in a set must match the copy that is kept (before, A like B and B like C put A, B and C together, which made sets of 40+).",
-  "Duplicates: new option 'Never match recordings whose names show different times' (on): camera files named by their recording time are never treated as copies of each other. Identical files are still found."
+  "Updates: if a downloaded update didn't install when Breezy closed, the next start offers to run its installer. The quiet install now writes what it did to updates\\run_update.log."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.0/breezy-update-0.30.0.zip",
- "sha256": "2f1e6b731b9b46d21e2497f6d7f184359dbb1938188a9e3eb61bb24a78c324f6",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.0/BreezyVideoSetup-0.30.0.exe",
- "installer_sha256": "9743d2e330bbdbe8b201fe307d3bcf5ec109f2986d5f4583c9259c803cc12ccb"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.1/breezy-update-0.30.1.zip",
+ "sha256": "ed0b26bd7d32da1ba6abb7f1887b0f12142be1b9fefb4b9033058bd2f9d32994",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.30.1/BreezyVideoSetup-0.30.1.exe",
+ "installer_sha256": "916c0e62e4373df804123fdea47aff4b4a2e65c022e38d5d0df8132c709fd9db"
 }
