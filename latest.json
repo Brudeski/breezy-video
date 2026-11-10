@@ -1,10 +1,10 @@
 {
- "version": "0.35.2",
+ "version": "0.35.3",
  "notes": [
-  "Settings > AI: the TensorRT check for AI denoise and AI deblur timed a picture it had just done, so nothing had to be worked out again and it showed 0.1 s. It now times new pictures, and the same pictures without TensorRT, and shows how much faster TensorRT is."
+  "Enhance: TensorRT is now only used for AI denoise and AI deblur where it is really faster than CUDA on your graphics card. Each is timed once (and again by the check in Settings > AI), and the faster one is used from then on. On an RTX 2070 that is TensorRT for AI denoise and CUDA for AI deblur, where TensorRT was half as fast."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.2/breezy-update-0.35.2.zip",
- "sha256": "ed4cd361a42121039f4acb8ca9661f112e1fd434304365f7e964a722e893fd25",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.2/BreezyVideoSetup-0.35.2.exe",
- "installer_sha256": "eceab6f8a33d9b4fb694de7fa1af0c052e022fb47736b5989cc06a6ef86c4dee"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.3/breezy-update-0.35.3.zip",
+ "sha256": "8fc795aec772d0fb1b747b12c34cb028b660123a5aca9996fe986278e05bcd05",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.3/BreezyVideoSetup-0.35.3.exe",
+ "installer_sha256": "a6350d00b8d49cf92c49ce7a8c62b2ce6b82bf7c64a0f6b21f1cfa872db117ca"
 }
