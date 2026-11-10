@@ -1,17 +1,14 @@
 {
- "version": "0.34.0",
+ "version": "0.35.0",
  "notes": [
-  "New look for the sidebar: the tools are in four groups (Find, Cut and frame, Improve, Automate), and Tasks and Settings stay pinned at the bottom. 'Tasks' shows how many are running or waiting.",
-  "Tasks page: tasks are cards in three groups - Running, Waiting, Finished (newest first) - with when they finished, 'Play' / 'Open folder' for what they made, and 'Run again' to queue the same videos and settings once more.",
-  "Settings are in tabs: General, Performance, AI, Files and tools, Updates, What's new.",
-  "Every page: a small picture of each video in the lists (Settings > General > 'Pictures in the video lists' turns them off), a hint in an empty list, a one-line description with a '?' for the rest, and the message box only appears when there is a message. The run button says how many videos it will work on, and about how long that takes once Breezy has done that kind of task here.",
-  "Footage: 'Video of the matches…' joins the matching moments of a search (or of the selected rows) into one video, a few seconds around each, with a list of which clip is where. Seconds before and after, the number of clips and their order are in the page's settings.",
-  "Footage: indexing now notices small changes - a person far away - between the regular looks, ignores things that change all the time (the camera's clock, a flag in the wind), and gives the AI a close-up of the spot. The calendar matches the rest of the app.",
-  "Duplicates: what a scan worked out for each video is kept in a small database instead of one big file (181 MB for 85,000 videos) that was read and rewritten whole at every scan. The old file is taken over once and removed.",
-  "Fixed: a finished task's own summary ('120 videos indexed', the speed test's result) was replaced by an empty line."
+  "Duplicates: 'Example folder…' copies the sets Breezy is least sure about into a folder to look at (Breezy Output > Duplicate examples). In each set the file it would keep is marked KEEP, the others 'extra'. On the way every byte of the copies is compared, and a note in each set says whether they are truly identical. The originals are not touched.",
+  "Duplicates: how sure is 'sure'? Same-footage sets by how alike the pictures are; identical files by how much of the file the quick check compared (size plus three 1 MB samples - the whole file up to 3 MB, less of it the bigger the file).",
+  "Duplicates: with 'Also find the same footage' off, a scan no longer opens every video - it only needs each file's size, date and quick check. 85,000 videos are listed in a minute or two instead of 40 minutes. (Picture size and length stay empty in that list; Compare still works.)",
+  "Enhance: AI denoise and AI deblur can now use TensorRT. It couldn't prepare them for 'any tile size'; now it prepares one engine for each tile size actually used, checks its result against the processor's, and falls back to CUDA for a size where that doesn't work (remembered). Settings > AI > 'Prepare AI denoise and AI deblur for TensorRT now' does it ahead of time and shows which engine each one runs with and how fast.",
+  "Tasks: a task's own summary is kept when it finished with problems ('… · 1 problem(s)')."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.34.0/breezy-update-0.34.0.zip",
- "sha256": "31ae49c3aa20427b4431e2cd08055e21122b8b1db1d45a3819763efda8e80ec1",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.34.0/BreezyVideoSetup-0.34.0.exe",
- "installer_sha256": "0b8520220af3121bf0da834c53fbe3705961c46887ca069d43c74b51f4c3a5d5"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.0/breezy-update-0.35.0.zip",
+ "sha256": "2154b2550d81698e3a3669773a8aaefbb77ef22730bf9ffc66a7ceb475489c59",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.0/BreezyVideoSetup-0.35.0.exe",
+ "installer_sha256": "b1930ee5498e4c965743d4934a6acee02070e199df180dad246431755463a25e"
 }
