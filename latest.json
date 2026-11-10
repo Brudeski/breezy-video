@@ -1,14 +1,10 @@
 {
- "version": "0.35.0",
+ "version": "0.35.1",
  "notes": [
-  "Duplicates: 'Example folder…' copies the sets Breezy is least sure about into a folder to look at (Breezy Output > Duplicate examples). In each set the file it would keep is marked KEEP, the others 'extra'. On the way every byte of the copies is compared, and a note in each set says whether they are truly identical. The originals are not touched.",
-  "Duplicates: how sure is 'sure'? Same-footage sets by how alike the pictures are; identical files by how much of the file the quick check compared (size plus three 1 MB samples - the whole file up to 3 MB, less of it the bigger the file).",
-  "Duplicates: with 'Also find the same footage' off, a scan no longer opens every video - it only needs each file's size, date and quick check. 85,000 videos are listed in a minute or two instead of 40 minutes. (Picture size and length stay empty in that list; Compare still works.)",
-  "Enhance: AI denoise and AI deblur can now use TensorRT. It couldn't prepare them for 'any tile size'; now it prepares one engine for each tile size actually used, checks its result against the processor's, and falls back to CUDA for a size where that doesn't work (remembered). Settings > AI > 'Prepare AI denoise and AI deblur for TensorRT now' does it ahead of time and shows which engine each one runs with and how fast.",
-  "Tasks: a task's own summary is kept when it finished with problems ('… · 1 problem(s)')."
+  "Duplicates: with many thousands of sets the window froze for minutes after a scan and again at every click on a row (it counted the unticked copies in a very slow way). Now it's instant."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.0/breezy-update-0.35.0.zip",
- "sha256": "2154b2550d81698e3a3669773a8aaefbb77ef22730bf9ffc66a7ceb475489c59",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.0/BreezyVideoSetup-0.35.0.exe",
- "installer_sha256": "b1930ee5498e4c965743d4934a6acee02070e199df180dad246431755463a25e"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.1/breezy-update-0.35.1.zip",
+ "sha256": "50d23d6b0bd5a608ccfe2828e5c3b4ae711cbc373cadb326f81a28b2595b89f2",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.1/BreezyVideoSetup-0.35.1.exe",
+ "installer_sha256": "5dab80ff2db17056e7ad419ce179b54b528e1845a023802165e0f1d91d05c695"
 }
