@@ -1,10 +1,10 @@
 {
- "version": "0.35.1",
+ "version": "0.35.2",
  "notes": [
-  "Duplicates: with many thousands of sets the window froze for minutes after a scan and again at every click on a row (it counted the unticked copies in a very slow way). Now it's instant."
+  "Settings > AI: the TensorRT check for AI denoise and AI deblur timed a picture it had just done, so nothing had to be worked out again and it showed 0.1 s. It now times new pictures, and the same pictures without TensorRT, and shows how much faster TensorRT is."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.1/breezy-update-0.35.1.zip",
- "sha256": "50d23d6b0bd5a608ccfe2828e5c3b4ae711cbc373cadb326f81a28b2595b89f2",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.1/BreezyVideoSetup-0.35.1.exe",
- "installer_sha256": "5dab80ff2db17056e7ad419ce179b54b528e1845a023802165e0f1d91d05c695"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.2/breezy-update-0.35.2.zip",
+ "sha256": "ed4cd361a42121039f4acb8ca9661f112e1fd434304365f7e964a722e893fd25",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.2/BreezyVideoSetup-0.35.2.exe",
+ "installer_sha256": "eceab6f8a33d9b4fb694de7fa1af0c052e022fb47736b5989cc06a6ef86c4dee"
 }
