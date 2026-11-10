@@ -1,10 +1,14 @@
 {
- "version": "0.39.2",
+ "version": "0.39.3",
  "notes": [
-  "Stitcher: new tick box 'Stitch when the scan finishes', under the Scan button. With it ticked, one press of Scan does both: when the scan is done, the ticked groups (those at or above 'Auto-tick groups from') are stitched straight away. You don't look the groups over first, and groups that have to be re-encoded are stitched too without the usual question. Where the files go is settled when you press Scan. Untick the box while the scan is running to call the stitching off. It is off unless you tick it."
+  "Stitcher: new setting 'Re-sync sound up to' (Sound, 5 %). Sound drift is a fraction of a percent, and that is fixed as before. A clip whose sound would have to be sped up or slowed down by more than this is not drifting: its sound stops early or runs on. Such a clip now keeps its sound at normal speed, cut or filled with silence to the picture's length. Before, the sound was stretched whatever it took (a clip with 40 s of sound for 60 s of picture played at 68 % speed), and when it would have needed less than half speed the whole group was not made. That is why '2025-11-12 00.00.46_60_A' (168 clips) was missing from the big stitch. 13 of the 65,596 security clips are over 5 %. Set it to 100 % to always re-sync.",
+  "Stitcher: the length check no longer calls right files too short. When the sound was re-synced, the joined file is as long as the clips' pictures; the check compared it with the clips' own lengths, which count the longer sound too. 21 files of the big stitch got the warning 'output is 0:14:57 but pieces add up to 0:15:02' and are fine. A re-encoded join at a low frame rate is also no longer called out of step when its last picture ends up to two frames before the sound.",
+  "Fixed the 'Unexpected error: dictionary changed size during iteration' box that came up a few minutes into a very large stitch. Breezy was saving the task's progress at the same moment a join added its finished file. The stitch itself carried on and finished.",
+  "While that box was open, the task's clock stood still: the Tasks page showed about 6 minutes for a stitch that took 2 hours, and progress was not being saved. An error box no longer holds anything up, and only one is shown at a time. The stitching speed learned from that run was about ten times too high, so it is forgotten once and learned again.",
+  "Very large tasks (thousands of groups) are easier on the PC: their progress was written to disk twice a second, 16 MB each time for the 3,185-group stitch. Now it is written about every 16 seconds for a task that size (small tasks as before), and always when a task ends."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.2/breezy-update-0.39.2.zip",
- "sha256": "65acac2a8cd19345f18dfd833e3186a7323b67c0566a56afd7f9f506b9f1c31d",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.2/BreezyVideoSetup-0.39.2.exe",
- "installer_sha256": "0830541f97a494bede41e5c9d4da8e6acad41c27573a18326a0a719a153aea00"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.3/breezy-update-0.39.3.zip",
+ "sha256": "fd260648eef33b2de3ff7cddd2974054b3689b7dd8e308d4c15ec6c4cdd35e5e",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.3/BreezyVideoSetup-0.39.3.exe",
+ "installer_sha256": "b1b456316bfe5a7df48e1d0819cc10d1fcb29ed9927d0dfa17c4d171a0402963"
 }
