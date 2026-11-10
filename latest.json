@@ -1,11 +1,10 @@
 {
- "version": "0.38.0",
+ "version": "0.38.2",
  "notes": [
-  "Stitcher: 'Sound-sync examples…' looks at 300 clips of the folder picked at random, says how many have sound that is longer or shorter than the picture, fixes a few of them the way a join does (picture untouched, sound matched to it) and puts original and fixed side by side in Breezy Output > Sync examples, with the measured lengths. The originals are not touched.",
-  "Stitcher: joins that re-sync the sound no longer leave an empty hidden folder behind."
+  "AI without the NVIDIA engine (DirectML): Breezy could close without a word in the middle of a task. Two things caused it and both are fixed. AI denoise is now loaded for the exact size of the pieces it works on, in pieces of 256 (it needs a lot of graphics memory this way). And two AI steps no longer use the graphics card at the very same moment - they take turns. With the NVIDIA engine, which your PC uses, nothing changes."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.38.0/breezy-update-0.38.0.zip",
- "sha256": "08686c664f6b546c98c33647860162aacc604d563b27688cb62ab374fd4ba31a",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.38.0/BreezyVideoSetup-0.38.0.exe",
- "installer_sha256": "2aae2ccd0baf5f28e056c73e40e2b16d67d3bd38fbcb6788c39bc244a4bd383f"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.38.2/breezy-update-0.38.2.zip",
+ "sha256": "1c8d8d1acda8421de2dcf606bc017bd3b5c0b1355bde23bad598a130608dfe9c",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.38.2/BreezyVideoSetup-0.38.2.exe",
+ "installer_sha256": "65a24b8f3b105e71faaa2eef8ebd3dc4f838d1a94018bcf86a2547a57d0dc1e4"
 }
