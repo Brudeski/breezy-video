@@ -1,10 +1,10 @@
 {
- "version": "0.35.3",
+ "version": "0.36.0",
  "notes": [
-  "Enhance: TensorRT is now only used for AI denoise and AI deblur where it is really faster than CUDA on your graphics card. Each is timed once (and again by the check in Settings > AI), and the faster one is used from then on. On an RTX 2070 that is TensorRT for AI denoise and CUDA for AI deblur, where TensorRT was half as fast."
+  "Duplicates: moving the unticked copies to the Recycle Bin now runs as a task in the background (with progress, and it can be cancelled) instead of freezing the window. Before anything is moved Breezy checks that the Recycle Bin of the drive can hold all the copies - if not, Windows would quietly throw older ones out for good, so then nothing is moved and it says how much room is needed. A copy is only moved while the copy to keep is still there and the same size."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.3/breezy-update-0.35.3.zip",
- "sha256": "8fc795aec772d0fb1b747b12c34cb028b660123a5aca9996fe986278e05bcd05",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.35.3/BreezyVideoSetup-0.35.3.exe",
- "installer_sha256": "a6350d00b8d49cf92c49ce7a8c62b2ce6b82bf7c64a0f6b21f1cfa872db117ca"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.36.0/breezy-update-0.36.0.zip",
+ "sha256": "34a8ac888a6923cffb9cbb10d8a06219a7f69b7f2de6fa75d0334986da33f512",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.36.0/BreezyVideoSetup-0.36.0.exe",
+ "installer_sha256": "6a31c83f1aa59bc7d05d8aa19b8f49f3e104aa9a561d5ac6d93139333fa355dc"
 }
