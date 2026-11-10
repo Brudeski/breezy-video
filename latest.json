@@ -1,13 +1,14 @@
 {
- "version": "0.31.0",
+ "version": "0.32.0",
  "notes": [
-  "Duplicates: 'Keep copies in these folders first' - a list of folders in order of preference; in each set the copy in the first listed folder is kept (otherwise the best copy). Right-click a copy: 'Keep copies in this folder for every set'. New 'Compare…' plays a copy side by side with the kept one.",
-  "Subject Tracker: long videos are made in 1-minute parts - a stopped or interrupted video continues after the last finished part instead of starting again.",
-  "Subject Tracker: faster - frames are cropped on several processor cores with fewer copies, and finding subjects decodes and shrinks the video on NVIDIA graphics cards while the AI looks at the previous frame.",
-  "Enhance: 'AI denoise only when the video is noisy' - each video is checked and clean ones skip the slow AI denoise. Settings > AI engine: whether the quality levels with AI denoise use it on every video or only on noisy ones."
+  "New Footage page: search your videos by describing what you're looking for - 'a person at the front door', 'white van', 'dog on the lawn'. Add your footage folders and press 'Index now' (or let it index automatically while the PC is idle); each video is looked at once by an AI model on the graphics card. Results show the best moment of each video with a picture; double-click to watch from that moment, right-click for 'Find more like this moment' or to send videos to another page.",
+  "Footage: a calendar shows the days with footage and how much was recorded each hour (from the recording time in the file names, or the file date). Click a day or an hour to list its videos or to search only then.",
+  "Footage settings: pictures whenever the picture changes or at a fixed interval, normal or fine detail (finds small things), index on request or automatically when the PC is idle, hide weak matches.",
+  "Settings > Your PC: 'Subject Tracker speed test' - times finding subjects and reframing on a made-up 4K clip, each way Breezy can do it, so you can see what your PC is fastest at.",
+  "Tasks: finished tasks stay in the list after Breezy restarts (for example after an update), until you click 'Clear finished'."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.31.0/breezy-update-0.31.0.zip",
- "sha256": "9b36d82eca14e41f68cdda0f4c12edca6f351c66e6933b4106a5a4f225e31188",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.31.0/BreezyVideoSetup-0.31.0.exe",
- "installer_sha256": "af30b04462c63883293047a3b1e361f0dc7e782397079f2f8b4ce707d738b4b6"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.32.0/breezy-update-0.32.0.zip",
+ "sha256": "98a50596a9bcc49c4b9f2d8c056c35fd89e2eedc17de6bf9e4dec1263b434a2f",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.32.0/BreezyVideoSetup-0.32.0.exe",
+ "installer_sha256": "3187e596c03672891cdab38926123f7f722fb8cb97d93ba6b8262d593e45ea2f"
 }
