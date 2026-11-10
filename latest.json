@@ -1,13 +1,10 @@
 {
- "version": "0.39.0",
+ "version": "0.39.1",
  "notes": [
-  "Stitcher, much faster on large libraries. Stitching: several groups are now joined at the same time (new setting 'Joins at once' under Performance, 4 on this PC), and when the sound has to be matched to the picture, that is done for several clips at once ('Sounds re-synced at once'). Each joined file is made exactly as before.",
-  "Sound bitrate 'Automatic' now follows the sound (on every page): normal sound gets 96 kbps per channel as before, low-rate sound gets what it can use - the 8 kHz sound of security cameras 32 kbps. Asked for 96, the encoder could not use it (the file came out the same size) but took four times as long. A bitrate you pick yourself is used as it is.",
-  "Stitcher scan: every clip is read once and remembered, so stitching no longer reads them all again and a second scan of the same folder takes seconds. The scene pictures are taken with one start of FFmpeg per clip instead of two, and are kept in a small database instead of one big file that was written again and again (the pictures already made are taken over). Regrouping after you change a setting is quick.",
-  "Stitcher: with 'Compare scenes' and 'Keep different cameras apart' both unticked, a scan no longer takes scene pictures at all - that is the slowest part of a scan. Tick either one and scan again to get them back."
+  "Stitcher: the Performance settings (Files read at once, Scene checks at once, Joins at once, Sounds re-synced at once) are now kept as soon as you change them. Before, they were only kept when you pressed Scan or Stitch, so a change could be lost when Breezy was closed first."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.0/breezy-update-0.39.0.zip",
- "sha256": "5b0a454111a35a490b904ba71360848ff01eb2877b19188833fc99f27810cad2",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.0/BreezyVideoSetup-0.39.0.exe",
- "installer_sha256": "dacfa724b9e31ed94c939f4e22e125b8bf4d456a5738c3be4f11728c4b3f1f0d"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.1/breezy-update-0.39.1.zip",
+ "sha256": "813920a17ae278f23519afc4e172aab15c2f7424f2e968ad12cd5830b8b714d0",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.1/BreezyVideoSetup-0.39.1.exe",
+ "installer_sha256": "5254a963050c49eba09f3f574ef89eefb63824fdae416a6d61533138e13e8683"
 }
