@@ -1,10 +1,11 @@
 {
- "version": "0.36.0",
+ "version": "0.37.0",
  "notes": [
-  "Duplicates: moving the unticked copies to the Recycle Bin now runs as a task in the background (with progress, and it can be cancelled) instead of freezing the window. Before anything is moved Breezy checks that the Recycle Bin of the drive can hold all the copies - if not, Windows would quietly throw older ones out for good, so then nothing is moved and it says how much room is needed. A copy is only moved while the copy to keep is still there and the same size."
+  "New logo and icon: a B made of an upright and two play arrows, with the wind blowing off its back.",
+  "Taskbar: Breezy's running window showed as a blank page beside the pinned button. It now sits on the pinned button with the right icon. (Breezy still gave Windows the name it used as a script, and Windows then looked for a shortcut that no longer exists.)"
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.36.0/breezy-update-0.36.0.zip",
- "sha256": "34a8ac888a6923cffb9cbb10d8a06219a7f69b7f2de6fa75d0334986da33f512",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.36.0/BreezyVideoSetup-0.36.0.exe",
- "installer_sha256": "6a31c83f1aa59bc7d05d8aa19b8f49f3e104aa9a561d5ac6d93139333fa355dc"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.37.0/breezy-update-0.37.0.zip",
+ "sha256": "f50a66d5c99224d83f8ccb1b747d9f96fd8450a89760a60295e056a2de196ada",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.37.0/BreezyVideoSetup-0.37.0.exe",
+ "installer_sha256": "ba46004d4b2a0965ad8d60663149ada8c4d140b6e0a4cfed0085ec9fcf747383"
 }
