@@ -1,17 +1,17 @@
 {
- "version": "0.33.0",
+ "version": "0.34.0",
  "notes": [
-  "Subject Tracker: a much faster way of reframing. Until now every full frame was handed from one program to the next to be cropped, which is what held 4K videos back. Now one FFmpeg run decodes, crops (it is told each frame's rectangle), scales only the cropped part and encodes. There is also an all-on-the-graphics-card way for NVIDIA cards (it needs an FFmpeg newer than 7.1).",
-  "Subject Tracker: uses whatever is fastest on your PC. The speed test (Settings > Your PC) now times every way of finding subjects and of reframing for H.264 and H.265 videos, checks that each faster way makes exactly the same video as the classic way, and the tracker then uses the fastest one that passed. It runs once by itself after this update (about 3 minutes, made-up clips only). 'Use the fastest way the speed test found' can be turned off in Settings.",
-  "Speed test: warms up first and takes the better of two runs, so the first timing is no longer unfairly slow.",
-  "Tasks: the runs Breezy still knows from its output history are back on the Tasks page (their logs weren't kept; the files they made are listed).",
-  "Fixed: turning the mouse wheel while the pointer passed over a drop-down list or number box changed that setting. Now the page scrolls; a setting only follows the wheel after you click it.",
-  "Fixed: a tracker video with very many separate subject stretches could fail on Windows because the instructions for cutting the sound were too long for one command.",
-  "Fixed: a resumed tracker video could skip one frame at the point where it continued.",
-  "Footage: a camera where nothing changes is stored as one picture instead of one every 10 seconds - a much smaller index and faster searches for security footage. Search pictures kept on disk are limited to the newest 4,000."
+  "New look for the sidebar: the tools are in four groups (Find, Cut and frame, Improve, Automate), and Tasks and Settings stay pinned at the bottom. 'Tasks' shows how many are running or waiting.",
+  "Tasks page: tasks are cards in three groups - Running, Waiting, Finished (newest first) - with when they finished, 'Play' / 'Open folder' for what they made, and 'Run again' to queue the same videos and settings once more.",
+  "Settings are in tabs: General, Performance, AI, Files and tools, Updates, What's new.",
+  "Every page: a small picture of each video in the lists (Settings > General > 'Pictures in the video lists' turns them off), a hint in an empty list, a one-line description with a '?' for the rest, and the message box only appears when there is a message. The run button says how many videos it will work on, and about how long that takes once Breezy has done that kind of task here.",
+  "Footage: 'Video of the matches…' joins the matching moments of a search (or of the selected rows) into one video, a few seconds around each, with a list of which clip is where. Seconds before and after, the number of clips and their order are in the page's settings.",
+  "Footage: indexing now notices small changes - a person far away - between the regular looks, ignores things that change all the time (the camera's clock, a flag in the wind), and gives the AI a close-up of the spot. The calendar matches the rest of the app.",
+  "Duplicates: what a scan worked out for each video is kept in a small database instead of one big file (181 MB for 85,000 videos) that was read and rewritten whole at every scan. The old file is taken over once and removed.",
+  "Fixed: a finished task's own summary ('120 videos indexed', the speed test's result) was replaced by an empty line."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.33.0/breezy-update-0.33.0.zip",
- "sha256": "987ffafd529e4a3675484ad6e19735fc0b2ed447affdd4bd3d2c861cc4e3411e",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.33.0/BreezyVideoSetup-0.33.0.exe",
- "installer_sha256": "7005e869587839466d6d3316b865eeb9b5c0b0f9bd13de8eba3394bfad732904"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.34.0/breezy-update-0.34.0.zip",
+ "sha256": "31ae49c3aa20427b4431e2cd08055e21122b8b1db1d45a3819763efda8e80ec1",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.34.0/BreezyVideoSetup-0.34.0.exe",
+ "installer_sha256": "0b8520220af3121bf0da834c53fbe3705961c46887ca069d43c74b51f4c3a5d5"
 }
