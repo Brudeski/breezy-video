@@ -1,10 +1,10 @@
 {
- "version": "0.39.1",
+ "version": "0.39.2",
  "notes": [
-  "Stitcher: the Performance settings (Files read at once, Scene checks at once, Joins at once, Sounds re-synced at once) are now kept as soon as you change them. Before, they were only kept when you pressed Scan or Stitch, so a change could be lost when Breezy was closed first."
+  "Stitcher: new tick box 'Stitch when the scan finishes', under the Scan button. With it ticked, one press of Scan does both: when the scan is done, the ticked groups (those at or above 'Auto-tick groups from') are stitched straight away. You don't look the groups over first, and groups that have to be re-encoded are stitched too without the usual question. Where the files go is settled when you press Scan. Untick the box while the scan is running to call the stitching off. It is off unless you tick it."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.1/breezy-update-0.39.1.zip",
- "sha256": "813920a17ae278f23519afc4e172aab15c2f7424f2e968ad12cd5830b8b714d0",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.1/BreezyVideoSetup-0.39.1.exe",
- "installer_sha256": "5254a963050c49eba09f3f574ef89eefb63824fdae416a6d61533138e13e8683"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.2/breezy-update-0.39.2.zip",
+ "sha256": "65acac2a8cd19345f18dfd833e3186a7323b67c0566a56afd7f9f506b9f1c31d",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.2/BreezyVideoSetup-0.39.2.exe",
+ "installer_sha256": "0830541f97a494bede41e5c9d4da8e6acad41c27573a18326a0a719a153aea00"
 }
