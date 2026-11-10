@@ -1,11 +1,11 @@
 {
- "version": "0.37.0",
+ "version": "0.37.1",
  "notes": [
-  "New logo and icon: a B made of an upright and two play arrows, with the wind blowing off its back.",
-  "Taskbar: Breezy's running window showed as a blank page beside the pinned button. It now sits on the pinned button with the right icon. (Breezy still gave Windows the name it used as a script, and Windows then looked for a shortcut that no longer exists.)"
+  "After an update Breezy tells Windows that its icon changed, so the pinned taskbar button and the shortcuts pick up the new logo.",
+  "Starting Breezy again while it is already running now also brings its window back when that window had ended up off the screen (a taskbar button with nothing to see)."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.37.0/breezy-update-0.37.0.zip",
- "sha256": "f50a66d5c99224d83f8ccb1b747d9f96fd8450a89760a60295e056a2de196ada",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.37.0/BreezyVideoSetup-0.37.0.exe",
- "installer_sha256": "ba46004d4b2a0965ad8d60663149ada8c4d140b6e0a4cfed0085ec9fcf747383"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.37.1/breezy-update-0.37.1.zip",
+ "sha256": "d7ab79e52c2bac5a19ff536236ac6e18dcd7a18cf50349e7b3f9ba4ce44e9c40",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.37.1/BreezyVideoSetup-0.37.1.exe",
+ "installer_sha256": "976559b034533671f02ac3ec74dd4dc5c8045ab56a38a6a75f997023445f9a4b"
 }
