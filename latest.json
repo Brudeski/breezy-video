@@ -1,14 +1,17 @@
 {
- "version": "0.32.0",
+ "version": "0.33.0",
  "notes": [
-  "New Footage page: search your videos by describing what you're looking for - 'a person at the front door', 'white van', 'dog on the lawn'. Add your footage folders and press 'Index now' (or let it index automatically while the PC is idle); each video is looked at once by an AI model on the graphics card. Results show the best moment of each video with a picture; double-click to watch from that moment, right-click for 'Find more like this moment' or to send videos to another page.",
-  "Footage: a calendar shows the days with footage and how much was recorded each hour (from the recording time in the file names, or the file date). Click a day or an hour to list its videos or to search only then.",
-  "Footage settings: pictures whenever the picture changes or at a fixed interval, normal or fine detail (finds small things), index on request or automatically when the PC is idle, hide weak matches.",
-  "Settings > Your PC: 'Subject Tracker speed test' - times finding subjects and reframing on a made-up 4K clip, each way Breezy can do it, so you can see what your PC is fastest at.",
-  "Tasks: finished tasks stay in the list after Breezy restarts (for example after an update), until you click 'Clear finished'."
+  "Subject Tracker: a much faster way of reframing. Until now every full frame was handed from one program to the next to be cropped, which is what held 4K videos back. Now one FFmpeg run decodes, crops (it is told each frame's rectangle), scales only the cropped part and encodes. There is also an all-on-the-graphics-card way for NVIDIA cards (it needs an FFmpeg newer than 7.1).",
+  "Subject Tracker: uses whatever is fastest on your PC. The speed test (Settings > Your PC) now times every way of finding subjects and of reframing for H.264 and H.265 videos, checks that each faster way makes exactly the same video as the classic way, and the tracker then uses the fastest one that passed. It runs once by itself after this update (about 3 minutes, made-up clips only). 'Use the fastest way the speed test found' can be turned off in Settings.",
+  "Speed test: warms up first and takes the better of two runs, so the first timing is no longer unfairly slow.",
+  "Tasks: the runs Breezy still knows from its output history are back on the Tasks page (their logs weren't kept; the files they made are listed).",
+  "Fixed: turning the mouse wheel while the pointer passed over a drop-down list or number box changed that setting. Now the page scrolls; a setting only follows the wheel after you click it.",
+  "Fixed: a tracker video with very many separate subject stretches could fail on Windows because the instructions for cutting the sound were too long for one command.",
+  "Fixed: a resumed tracker video could skip one frame at the point where it continued.",
+  "Footage: a camera where nothing changes is stored as one picture instead of one every 10 seconds - a much smaller index and faster searches for security footage. Search pictures kept on disk are limited to the newest 4,000."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.32.0/breezy-update-0.32.0.zip",
- "sha256": "98a50596a9bcc49c4b9f2d8c056c35fd89e2eedc17de6bf9e4dec1263b434a2f",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.32.0/BreezyVideoSetup-0.32.0.exe",
- "installer_sha256": "3187e596c03672891cdab38926123f7f722fb8cb97d93ba6b8262d593e45ea2f"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.33.0/breezy-update-0.33.0.zip",
+ "sha256": "987ffafd529e4a3675484ad6e19735fc0b2ed447affdd4bd3d2c861cc4e3411e",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.33.0/BreezyVideoSetup-0.33.0.exe",
+ "installer_sha256": "7005e869587839466d6d3316b865eeb9b5c0b0f9bd13de8eba3394bfad732904"
 }
