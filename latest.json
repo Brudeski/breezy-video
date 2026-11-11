@@ -1,12 +1,12 @@
 {
- "version": "0.39.7",
+ "version": "0.39.8",
  "notes": [
-  "'Automatic' for how many videos are worked on at the same time is now on every page where it helps: Convert & Compress, Trim Ends, Rotate & Crop and the Stabilizer get a new 'Videos at once' setting; the Stitcher's 'Files read at once', 'Scene checks at once' and 'Joins at once', Footage search's 'Videos at once' and Organise's reading and comparing can all run on Automatic; Enhance's 'Automatic' now adjusts while it runs, never above what the graphics card's memory allows. Pages you already set keep their numbers until you choose Automatic (0 shows as 'Automatic').",
-  "Automatic finds its level sooner: it starts with 4 when the PC is quiet (2 when it's busy), looks every 10 seconds at first and adds two at a time while the PC is far from full. In a 100-second trim it used to reach 5 at once only as the trim ended.",
-  "Tried and left out: decoding on the graphics card while cutting. Starting the graphics card's decoder for each of the many short steps cost more than it saved: a trim of 91 videos took 170 seconds instead of 63-99, and 7 videos failed their check."
+  "Subject Tracker: new setting 'Make the videos' (in the Make card). 'After all are found' is what Breezy did until now: it finds the subjects in every video first and only then makes the results, so on a big job the first finished file appears after days. 'Each one right after it's found' makes every video as soon as its own subjects are found, while the next videos are already being looked at. Videos that were looked at in an earlier run are made first. On 12 security videos the first result was there after 40 seconds instead of 7 minutes, and the whole run took no longer (about 450 seconds against 456-471 with one video analyzed at a time; 331-367 against 373-397 with Automatic). The old order stays the default. In the new order the task counts videos (3 of 3185) instead of steps.",
+  "'Automatic' on the Subject Tracker now measures how the work goes in expected working time instead of minutes of footage. Finding subjects gets through footage far more slowly than cutting it, so with both mixed the old measure jumped with whatever happened to finish. Now a minute of finding and a minute of making weigh the same. Until a step has been timed on this PC, the old measure is used.",
+  "Fixed: with one task paused and another running, the progress bar at the bottom showed the paused task. It now shows the one that is running."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.7/breezy-update-0.39.7.zip",
- "sha256": "90b603e4e844bdf07f9cfa7e1d06923ae283eab0673a8145b4722e263c99350a",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.7/BreezyVideoSetup-0.39.7.exe",
- "installer_sha256": "b6fa19d4283572e10e9ebf8803c1bdd04aebc472bb680366e5a5043479fd18e9"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.8/breezy-update-0.39.8.zip",
+ "sha256": "6e501109a599a034bdb6b843fe026c8c42a5e3e3f80c850da33ea853826b2ade",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.8/BreezyVideoSetup-0.39.8.exe",
+ "installer_sha256": "d2a4caf1545b5330058c97e5cfa693ffeecaa57df72df84d0816bcdcfae1ca14"
 }
