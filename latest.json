@@ -1,13 +1,12 @@
 {
- "version": "0.39.6",
+ "version": "0.39.7",
  "notes": [
-  "Cutting a video that Breezy cut before (for example the Motion Trimmer on the Subject Tracker's 'Only the parts with subjects' files) no longer falls back to re-encoding everything. Such a file carries two kinds of picture settings: the camera's and those of the frames Breezy re-encoded at each cut. Copying a stretch out put the camera's settings in front of the re-encoded frames, which then could not be decoded. In a test, 22 of 91 videos fell back to a full re-encode; now all 91 are cut quickly, and the run took about 5.5 minutes instead of 8.5. Camera videos are cut as before.",
-  "New: 'Automatic' for how many videos are worked on at the same time. It starts with 2 and adds one while the processor, the graphics card and the memory have room and the work goes faster for it; when one more doesn't help, or the PC gets busy, it takes one away. It is the choice for 'Videos analyzed at once' on the Motion Trimmer and the Subject Tracker, and for the new 'Videos cut at once' (Motion Trimmer) and 'Videos made at once' (Subject Tracker): several videos are trimmed or made at the same time, so the processor and the graphics card each work on different videos. Pages you already set keep their number until you choose Automatic.",
-  "Find motion compares the pictures while it decodes them instead of after. The results are the same, but a 21-minute video now takes 30 MB of memory instead of 4 GB, so many more videos fit at once and all-day recordings can be analysed at all.",
-  "The Subject Tracker's time left also works out with Automatic: it learns how fast the work goes and how many videos run at once on average."
+  "'Automatic' for how many videos are worked on at the same time is now on every page where it helps: Convert & Compress, Trim Ends, Rotate & Crop and the Stabilizer get a new 'Videos at once' setting; the Stitcher's 'Files read at once', 'Scene checks at once' and 'Joins at once', Footage search's 'Videos at once' and Organise's reading and comparing can all run on Automatic; Enhance's 'Automatic' now adjusts while it runs, never above what the graphics card's memory allows. Pages you already set keep their numbers until you choose Automatic (0 shows as 'Automatic').",
+  "Automatic finds its level sooner: it starts with 4 when the PC is quiet (2 when it's busy), looks every 10 seconds at first and adds two at a time while the PC is far from full. In a 100-second trim it used to reach 5 at once only as the trim ended.",
+  "Tried and left out: decoding on the graphics card while cutting. Starting the graphics card's decoder for each of the many short steps cost more than it saved: a trim of 91 videos took 170 seconds instead of 63-99, and 7 videos failed their check."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.6/breezy-update-0.39.6.zip",
- "sha256": "5e1f92407a53c8861791dbf21a3bc9306db604b48b4e84ce61245eeaf0e40011",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.6/BreezyVideoSetup-0.39.6.exe",
- "installer_sha256": "d6a46c89b411ca099c912a10747e42713a5b7e0f25d7f315bf40831064529848"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.7/breezy-update-0.39.7.zip",
+ "sha256": "90b603e4e844bdf07f9cfa7e1d06923ae283eab0673a8145b4722e263c99350a",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.7/BreezyVideoSetup-0.39.7.exe",
+ "installer_sha256": "b6fa19d4283572e10e9ebf8803c1bdd04aebc472bb680366e5a5043479fd18e9"
 }
