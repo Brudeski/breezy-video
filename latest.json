@@ -1,14 +1,13 @@
 {
- "version": "0.39.3",
+ "version": "0.39.4",
  "notes": [
-  "Stitcher: new setting 'Re-sync sound up to' (Sound, 5 %). Sound drift is a fraction of a percent, and that is fixed as before. A clip whose sound would have to be sped up or slowed down by more than this is not drifting: its sound stops early or runs on. Such a clip now keeps its sound at normal speed, cut or filled with silence to the picture's length. Before, the sound was stretched whatever it took (a clip with 40 s of sound for 60 s of picture played at 68 % speed), and when it would have needed less than half speed the whole group was not made. That is why '2025-11-12 00.00.46_60_A' (168 clips) was missing from the big stitch. 13 of the 65,596 security clips are over 5 %. Set it to 100 % to always re-sync.",
-  "Stitcher: the length check no longer calls right files too short. When the sound was re-synced, the joined file is as long as the clips' pictures; the check compared it with the clips' own lengths, which count the longer sound too. 21 files of the big stitch got the warning 'output is 0:14:57 but pieces add up to 0:15:02' and are fine. A re-encoded join at a low frame rate is also no longer called out of step when its last picture ends up to two frames before the sound.",
-  "Fixed the 'Unexpected error: dictionary changed size during iteration' box that came up a few minutes into a very large stitch. Breezy was saving the task's progress at the same moment a join added its finished file. The stitch itself carried on and finished.",
-  "While that box was open, the task's clock stood still: the Tasks page showed about 6 minutes for a stitch that took 2 hours, and progress was not being saved. An error box no longer holds anything up, and only one is shown at a time. The stitching speed learned from that run was about ten times too high, so it is forgotten once and learned again.",
-  "Very large tasks (thousands of groups) are easier on the PC: their progress was written to disk twice a second, 16 MB each time for the 3,185-group stitch. Now it is written about every 16 seconds for a task that size (small tasks as before), and always when a task ends."
+  "Subject Tracker: a much better 'time left'. Ten 720p security clips were announced as 3 hours and took about a quarter of an hour, because Breezy had one learned speed for the whole task and had learned it on 4K clips. Now finding the subjects and making the videos are timed apart, and each is learned per kind of footage (codec, picture size, frames a second), so 4K clips no longer set the estimate for 720p ones.",
+  "Subject Tracker: as soon as a video's subjects are found, Breezy knows how much of it will be made and counts only that. Before, every video counted in full, also the ones that are skipped because nobody is in them.",
+  "While a task runs, its own speed corrects the estimate, finding and making each on its own. When part of the estimate is still a guess (a step never timed on this kind of footage), the time left reads 'about 25m left'. The speed shown while finding subjects, and the position in the video, are now the real ones (they were shown at 40 %).",
+  "Cutting out parts of a video (Subject Tracker 'Only the parts with subjects', Motion Trimmer, Trim Ends): the cuts now sit exactly on the video's frames. Before, a part's sound could be most of a frame longer or shorter than its picture, and over many parts that added up: with 12 to 14 parts the sound ended 0.13 s from the picture, Breezy's own check refused the file and nothing was made for that video (2 of 10 in a test). Files that were made could be up to 0.1 s out by their end; new ones are not."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.3/breezy-update-0.39.3.zip",
- "sha256": "fd260648eef33b2de3ff7cddd2974054b3689b7dd8e308d4c15ec6c4cdd35e5e",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.3/BreezyVideoSetup-0.39.3.exe",
- "installer_sha256": "b1b456316bfe5a7df48e1d0819cc10d1fcb29ed9927d0dfa17c4d171a0402963"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.4/breezy-update-0.39.4.zip",
+ "sha256": "54cf005d571078ee44e1b5289449eedbf899ec1069ba349d80f627c9b792cc91",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.4/BreezyVideoSetup-0.39.4.exe",
+ "installer_sha256": "f65d94e674c28b5b5fa8f2f3b91a3eb96e6c0d5d479cc8fb8626545d5e30dffc"
 }
