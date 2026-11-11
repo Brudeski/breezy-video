@@ -1,13 +1,15 @@
 {
- "version": "0.39.4",
+ "version": "0.39.5",
  "notes": [
-  "Subject Tracker: a much better 'time left'. Ten 720p security clips were announced as 3 hours and took about a quarter of an hour, because Breezy had one learned speed for the whole task and had learned it on 4K clips. Now finding the subjects and making the videos are timed apart, and each is learned per kind of footage (codec, picture size, frames a second), so 4K clips no longer set the estimate for 720p ones.",
-  "Subject Tracker: as soon as a video's subjects are found, Breezy knows how much of it will be made and counts only that. Before, every video counted in full, also the ones that are skipped because nobody is in them.",
-  "While a task runs, its own speed corrects the estimate, finding and making each on its own. When part of the estimate is still a guess (a step never timed on this kind of footage), the time left reads 'about 25m left'. The speed shown while finding subjects, and the position in the video, are now the real ones (they were shown at 40 %).",
-  "Cutting out parts of a video (Subject Tracker 'Only the parts with subjects', Motion Trimmer, Trim Ends): the cuts now sit exactly on the video's frames. Before, a part's sound could be most of a frame longer or shorter than its picture, and over many parts that added up: with 12 to 14 parts the sound ended 0.13 s from the picture, Breezy's own check refused the file and nothing was made for that video (2 of 10 in a test). Files that were made could be up to 0.1 s out by their end; new ones are not."
+  "Cutting out parts of a video (Subject Tracker 'Only the parts with subjects', Motion Trimmer, Trim Ends) works on more kinds of video. In a test on 100 security videos, 14 failed the quick cut and were re-encoded in full instead (slower, and bigger files), and 3 of those were refused altogether. Three causes, all fixed:",
+  "Videos that store B-frames: every copied stretch took 3 frames from after its end along. Now the copy stops at the last frame it can stop at cleanly, and the one or two frames after it are re-encoded.",
+  "Videos whose frame rate changes (10 frames a second in one stretch, 15 in the next): the re-encoded edges were spaced evenly, so a part could come out seconds too long. Every frame now keeps its own time.",
+  "Re-encoded edges of only one or two frames were read back half a frame short, so the next piece started too early. Each piece's length is now set exactly.",
+  "A re-encoded piece could leave out its own first frame and take one from after its end instead (its start time was rounded past the frame). It now starts at its first frame.",
+  "The check after a cut now also makes sure every frame is at its own time, and it no longer calls a correct B-frame video 0.13 s out of step."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.4/breezy-update-0.39.4.zip",
- "sha256": "54cf005d571078ee44e1b5289449eedbf899ec1069ba349d80f627c9b792cc91",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.4/BreezyVideoSetup-0.39.4.exe",
- "installer_sha256": "f65d94e674c28b5b5fa8f2f3b91a3eb96e6c0d5d479cc8fb8626545d5e30dffc"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.5/breezy-update-0.39.5.zip",
+ "sha256": "fcfeb59b1e88d5d093d5d4c0567e93b9543bfec2f81543b17a080ad18b021477",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.5/BreezyVideoSetup-0.39.5.exe",
+ "installer_sha256": "7ce91a97924b5c4a4c8b18c9ba38492ddbc8cc19e64d1cafd7fd5b109da3f21f"
 }
