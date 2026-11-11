@@ -1,15 +1,13 @@
 {
- "version": "0.39.5",
+ "version": "0.39.6",
  "notes": [
-  "Cutting out parts of a video (Subject Tracker 'Only the parts with subjects', Motion Trimmer, Trim Ends) works on more kinds of video. In a test on 100 security videos, 14 failed the quick cut and were re-encoded in full instead (slower, and bigger files), and 3 of those were refused altogether. Three causes, all fixed:",
-  "Videos that store B-frames: every copied stretch took 3 frames from after its end along. Now the copy stops at the last frame it can stop at cleanly, and the one or two frames after it are re-encoded.",
-  "Videos whose frame rate changes (10 frames a second in one stretch, 15 in the next): the re-encoded edges were spaced evenly, so a part could come out seconds too long. Every frame now keeps its own time.",
-  "Re-encoded edges of only one or two frames were read back half a frame short, so the next piece started too early. Each piece's length is now set exactly.",
-  "A re-encoded piece could leave out its own first frame and take one from after its end instead (its start time was rounded past the frame). It now starts at its first frame.",
-  "The check after a cut now also makes sure every frame is at its own time, and it no longer calls a correct B-frame video 0.13 s out of step."
+  "Cutting a video that Breezy cut before (for example the Motion Trimmer on the Subject Tracker's 'Only the parts with subjects' files) no longer falls back to re-encoding everything. Such a file carries two kinds of picture settings: the camera's and those of the frames Breezy re-encoded at each cut. Copying a stretch out put the camera's settings in front of the re-encoded frames, which then could not be decoded. In a test, 22 of 91 videos fell back to a full re-encode; now all 91 are cut quickly, and the run took about 5.5 minutes instead of 8.5. Camera videos are cut as before.",
+  "New: 'Automatic' for how many videos are worked on at the same time. It starts with 2 and adds one while the processor, the graphics card and the memory have room and the work goes faster for it; when one more doesn't help, or the PC gets busy, it takes one away. It is the choice for 'Videos analyzed at once' on the Motion Trimmer and the Subject Tracker, and for the new 'Videos cut at once' (Motion Trimmer) and 'Videos made at once' (Subject Tracker): several videos are trimmed or made at the same time, so the processor and the graphics card each work on different videos. Pages you already set keep their number until you choose Automatic.",
+  "Find motion compares the pictures while it decodes them instead of after. The results are the same, but a 21-minute video now takes 30 MB of memory instead of 4 GB, so many more videos fit at once and all-day recordings can be analysed at all.",
+  "The Subject Tracker's time left also works out with Automatic: it learns how fast the work goes and how many videos run at once on average."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.5/breezy-update-0.39.5.zip",
- "sha256": "fcfeb59b1e88d5d093d5d4c0567e93b9543bfec2f81543b17a080ad18b021477",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.5/BreezyVideoSetup-0.39.5.exe",
- "installer_sha256": "7ce91a97924b5c4a4c8b18c9ba38492ddbc8cc19e64d1cafd7fd5b109da3f21f"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.6/breezy-update-0.39.6.zip",
+ "sha256": "5e1f92407a53c8861791dbf21a3bc9306db604b48b4e84ce61245eeaf0e40011",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.6/BreezyVideoSetup-0.39.6.exe",
+ "installer_sha256": "d6a46c89b411ca099c912a10747e42713a5b7e0f25d7f315bf40831064529848"
 }
