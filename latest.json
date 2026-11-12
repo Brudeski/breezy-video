@@ -1,10 +1,12 @@
 {
- "version": "0.39.9",
+ "version": "0.39.10",
  "notes": [
-  "Subject Tracker, 'Make the videos: Each one right after it's found': Breezy now starts looking at new videos right away while it makes the videos it already looked at in an earlier run. Before, those known videos took up all the work first. With 236 of them (215 hours of footage) the graphics card had nothing to do for the hour or more their cutting took. They are still made first."
+  "New: you choose what the window's buttons do (Settings, General, 'Window'). The close button (X) now minimizes Breezy to the taskbar instead of closing it, so a click on X no longer stops anything: Breezy and its tasks keep running. It can also hide Breezy in the tray (the small icons next to the clock), or close Breezy as it did before. The minimize button can minimize to the taskbar, as it always did, or hide Breezy in the tray.",
+  "To close Breezy for real, use the new 'Quit Breezy' button in the same place, or right-click Breezy's tray icon and choose 'Quit Breezy'. Both ask first when tasks are running. An update that is waiting to be installed still installs when you press X, and Windows shutting down still closes Breezy.",
+  "A window that filled the screen fills it again when Breezy is brought back from the tray."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.9/breezy-update-0.39.9.zip",
- "sha256": "7f2c1473d9eae29a2744bea641d643773e81052d6e824ad0ea07ca2d78e5f4e9",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.9/BreezyVideoSetup-0.39.9.exe",
- "installer_sha256": "1e6477b26955057010e7a334c87dd6c3bb5723f51acbe63c34549540971c0df8"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.10/breezy-update-0.39.10.zip",
+ "sha256": "0c1a2f47cf1d4d74006b4cd199eb1240ddd24423b497d05194dbbc5461286087",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.10/BreezyVideoSetup-0.39.10.exe",
+ "installer_sha256": "fb3688a5890eabf7ca499881a5396ae110f750ce62f69e9bf09184494d72757f"
 }
