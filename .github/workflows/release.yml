@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: { path: pub }
       - name: Fetch the source
         shell: bash
@@ -32,7 +32,7 @@ jobs:
         shell: bash
         working-directory: src
         run: echo "tag=v$(python -c "import re;print(re.search(r'__version__ = \"([^\"]+)\"', open('breezy/__init__.py').read()).group(1))")" >> "$GITHUB_OUTPUT"
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
       - name: Install components
         working-directory: src
