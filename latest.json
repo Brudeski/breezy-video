@@ -1,12 +1,10 @@
 {
- "version": "0.39.8",
+ "version": "0.39.9",
  "notes": [
-  "Subject Tracker: new setting 'Make the videos' (in the Make card). 'After all are found' is what Breezy did until now: it finds the subjects in every video first and only then makes the results, so on a big job the first finished file appears after days. 'Each one right after it's found' makes every video as soon as its own subjects are found, while the next videos are already being looked at. Videos that were looked at in an earlier run are made first. On 12 security videos the first result was there after 40 seconds instead of 7 minutes, and the whole run took no longer (about 450 seconds against 456-471 with one video analyzed at a time; 331-367 against 373-397 with Automatic). The old order stays the default. In the new order the task counts videos (3 of 3185) instead of steps.",
-  "'Automatic' on the Subject Tracker now measures how the work goes in expected working time instead of minutes of footage. Finding subjects gets through footage far more slowly than cutting it, so with both mixed the old measure jumped with whatever happened to finish. Now a minute of finding and a minute of making weigh the same. Until a step has been timed on this PC, the old measure is used.",
-  "Fixed: with one task paused and another running, the progress bar at the bottom showed the paused task. It now shows the one that is running."
+  "Subject Tracker, 'Make the videos: Each one right after it's found': Breezy now starts looking at new videos right away while it makes the videos it already looked at in an earlier run. Before, those known videos took up all the work first. With 236 of them (215 hours of footage) the graphics card had nothing to do for the hour or more their cutting took. They are still made first."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.8/breezy-update-0.39.8.zip",
- "sha256": "6e501109a599a034bdb6b843fe026c8c42a5e3e3f80c850da33ea853826b2ade",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.8/BreezyVideoSetup-0.39.8.exe",
- "installer_sha256": "d2a4caf1545b5330058c97e5cfa693ffeecaa57df72df84d0816bcdcfae1ca14"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.9/breezy-update-0.39.9.zip",
+ "sha256": "7f2c1473d9eae29a2744bea641d643773e81052d6e824ad0ea07ca2d78e5f4e9",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.9/BreezyVideoSetup-0.39.9.exe",
+ "installer_sha256": "1e6477b26955057010e7a334c87dd6c3bb5723f51acbe63c34549540971c0df8"
 }
