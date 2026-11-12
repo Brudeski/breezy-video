@@ -1,12 +1,11 @@
 {
- "version": "0.39.10",
+ "version": "0.39.11",
  "notes": [
-  "New: you choose what the window's buttons do (Settings, General, 'Window'). The close button (X) now minimizes Breezy to the taskbar instead of closing it, so a click on X no longer stops anything: Breezy and its tasks keep running. It can also hide Breezy in the tray (the small icons next to the clock), or close Breezy as it did before. The minimize button can minimize to the taskbar, as it always did, or hide Breezy in the tray.",
-  "To close Breezy for real, use the new 'Quit Breezy' button in the same place, or right-click Breezy's tray icon and choose 'Quit Breezy'. Both ask first when tasks are running. An update that is waiting to be installed still installs when you press X, and Windows shutting down still closes Breezy.",
-  "A window that filled the screen fills it again when Breezy is brought back from the tray."
+  "'Automatic' (how many videos are worked on at once) now settles. When one more video at the same time did not make the work faster, it used to try again every two and a half minutes, for as long as the task ran. In the Subject Tracker run over 3,185 videos the graphics card was the limit, so it added a video and took it back for hours, and the two lines it wrote each time pushed everything else out of the task's log. Now it waits twice as long after every try that did not help (up to half an hour), and its line says when the next try is. When the PC gets clearly quieter in between, it tries right away. Applies to every page with 'Automatic'; a task that is already running keeps the old behaviour until Breezy is updated.",
+  "Measured in that run (new order, Automatic): finding subjects went at about 18 times real time, against 14.8 times in the run before it with one video at a time, and 179 results were there after 6 hours instead of none."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.10/breezy-update-0.39.10.zip",
- "sha256": "0c1a2f47cf1d4d74006b4cd199eb1240ddd24423b497d05194dbbc5461286087",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.10/BreezyVideoSetup-0.39.10.exe",
- "installer_sha256": "fb3688a5890eabf7ca499881a5396ae110f750ce62f69e9bf09184494d72757f"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.11/breezy-update-0.39.11.zip",
+ "sha256": "4c3ded3638591e246acbefe1dfa8e0a2f3f338210ff8c3c05d3003e6b5c9a81b",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.11/BreezyVideoSetup-0.39.11.exe",
+ "installer_sha256": "fd92ae12561e8b3b93902c372af2756d16eb32c2a23c8b0fdf18570e16067233"
 }
