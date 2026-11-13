@@ -1,10 +1,15 @@
 {
- "version": "0.39.12",
+ "version": "0.40.0",
  "notes": [
-  "The time a task will be done now comes with its day when that is not today: '63h 43m left (done Sat Nov 14, 6:49 PM)' instead of '(done 6:49 PM)'. A task that ends today shows the time alone, as before. In the bar at the bottom, on the task cards and in 'Done at' on the Tasks page."
+  "New page: Person Filter (under Find). It finds the videos in which one chosen person is the only one who appears, so you can put them away - to the Recycle Bin, or to a folder beside the video. Nothing is moved by the check itself: it fills the list ('Only <name>', 'Somebody else is in it', 'Not sure', 'Nobody in it'), and you put the 'only' ones away with a button after a look. 'Put them away as soon as the check finishes' is there too, off by default.",
+  "Teaching it a person: 'Add from a video' reads the faces in one video, sorts them into people and you tick the rows that are the person; 'Add from photos' works too. A video from the same cameras is best, because the person is then known the way those cameras see them.",
+  "How it decides, each rule a setting on the page: a video is 'only' the person when every appearance in it is them by their face, or follows straight on from one that is (lost from sight for a few seconds). A second person in view at the same time, or one clear face that doesn't match, keeps the video however brief it is. Unclear appearances are looked at picture by picture for a face. Things found as a person that never move and show no face (a coat on a chair) are ignored. Whatever can't be explained makes the video 'Not sure', and it stays.",
+  "Selecting a checked video shows every appearance in it as a small picture with a coloured frame: green = the person, red = somebody else, amber = not sure, grey = ignored.",
+  "It uses the Subject Tracker's finding of people, so videos that page has already looked at are not looked at again; reading the faces runs on the processor. One more model is downloaded for it (38 MB, tells whose face it is).",
+  "Tried on one of your videos so far (22 minutes, one man): not yet on a video with a second person in it, so look at the first results before trusting the automatic option."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.12/breezy-update-0.39.12.zip",
- "sha256": "881bd7731b557dc81643774571d93f18dfede6b329ff385d307e30485dae7a11",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.39.12/BreezyVideoSetup-0.39.12.exe",
- "installer_sha256": "b08d33dcf5ed57b2aee51154354fbe4382190394f342fb40f93d122a4c1faa9e"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.40.0/breezy-update-0.40.0.zip",
+ "sha256": "e5e1a5d2fedf07b1f0feccdf1a279bc3581d6b0ee880ad59af2478a891269bef",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.40.0/BreezyVideoSetup-0.40.0.exe",
+ "installer_sha256": "c2c9157bc4bdc6c2ae339489a4f5f95b996076b143720e00a3955700d11735d7"
 }
