@@ -1,11 +1,12 @@
 {
- "version": "0.40.1",
+ "version": "0.41.0",
  "notes": [
-  "Fixed: Breezy could open off the screen, to the left of the main monitor, when the mouse was on the second monitor as it started - also after an update. Breezy now opens where it was last (same monitor, place and size, maximized again if it was). If that monitor is gone or Breezy doesn't fit on it, it opens in the middle of the main monitor, and a window that still ends up off every screen is brought back at once.",
-  "Settings > General > Window > 'Breezy opens': where it was last (default) or always on the main monitor."
+  "New videos get a cover picture: the picture File Explorer shows for them. By default it is the first moment someone is seen in the video; if nobody is found, the middle of the video. Each page's Output card has a 'Cover picture' list: first picture with a person (default), the middle of the video, or let Windows choose (as before). Up to 120 pictures through the video are looked at, so it adds a few seconds per video. The picture is copied into the file; the video and its sound are not changed.",
+  "Only MP4 and MOV videos get one: Windows ignores a picture inside an MKV.",
+  "Videos of the matching moments (Footage search) get one too."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.40.1/breezy-update-0.40.1.zip",
- "sha256": "1b9330ce193fc0b835acd869f537f7e93aed295e31c51d994aa66eba82402679",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.40.1/BreezyVideoSetup-0.40.1.exe",
- "installer_sha256": "e4e240083cb86d2dfdd3f3d73043df80949756fba615299d38341592760b66ea"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.0/breezy-update-0.41.0.zip",
+ "sha256": "ec12111af0953425bba2c52a06cf42ab6e02baed8638aca34cce069c55ee2857",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.0/BreezyVideoSetup-0.41.0.exe",
+ "installer_sha256": "cf16c48d47f2af80859104f41ee13ef075dfc58758bca7f0121fecc3a96a74b4"
 }
