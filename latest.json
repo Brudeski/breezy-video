@@ -1,11 +1,11 @@
 {
- "version": "0.41.3",
+ "version": "0.41.4",
  "notes": [
-  "Subject Tracker: new 'Sort by people' option in the Make card. It puts each result in a subfolder of the output folder: '1 person', or '2+ people' when two people are seen in the picture together. Two people who come one after the other count as 1, and a second box over the same person (an arm, legs) doesn't count. It is off unless you choose it.",
-  "Two settings go with it: how long the two must be seen together (3 seconds) and how sure Breezy must be about each of them (60%). Lower values find more pairs, but more often one person seen twice."
+  "Right-click Breezy's taskbar button: 'Pause all tasks' while something is running or waiting, 'Resume all tasks' while tasks are paused. A short Windows notification says what was done.",
+  "The same two items are in the tray icon's menu."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.3/breezy-update-0.41.3.zip",
- "sha256": "3762faf89cabbab096e20edb8f992164be1047f88e81e64eef81f90c1c979ff6",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.3/BreezyVideoSetup-0.41.3.exe",
- "installer_sha256": "f58067ac8b2d556021e640078cfa96667cb0733184779be28ec2cf285eb1438d"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.4/breezy-update-0.41.4.zip",
+ "sha256": "7e161d0f17fbbc30fba411abbad840a90418186157e806f7bd0438644e174706",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.4/BreezyVideoSetup-0.41.4.exe",
+ "installer_sha256": "29d5291454493d38ff0930122f53cf710f838bfca81eb69d923022bc0d171fce"
 }
