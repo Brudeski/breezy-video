@@ -1,11 +1,15 @@
 {
- "version": "0.41.4",
+ "version": "0.42.0",
  "notes": [
-  "Right-click Breezy's taskbar button: 'Pause all tasks' while something is running or waiting, 'Resume all tasks' while tasks are paused. A short Windows notification says what was done.",
-  "The same two items are in the tray icon's menu."
+  "Enhance: the recommendation now comes from the video itself, not from the global Quality level. A deeper scan looks at pictures and sound from the whole video: noise, compression blocks, banding, how sharp it really is, light and colour, flicker, repeated frames, faces, and the sound's hiss, hum, distortion, wind and loudness. It recommends the best natural-looking result: AI is blended with the plain picture, faces are only restored when small and blurry, there's no sharpening on top of AI, and a little grain goes back after strong cleaning.",
+  "'Apply recommendation' gives the selected video its own settings ('Apply to all' does every scanned video). Selecting a video shows its settings, and anything you change there is for that video only. Videos without their own use the page settings. The list's new Settings column says which, and 'Use page settings' goes back.",
+  "Each reason is listed under the buttons (for example 'Noisy (4.2): AI noise removal at 40%').",
+  "The global Quality level still sets the page when you choose it, as a starting point.",
+  "'Adjust each video to its own scan automatically' is replaced by 'Videos without their own settings': the page settings (new default, so what you see is what runs) or their recommendation (handy for watch folders and pipelines).",
+  "The scan takes a little longer: 4-18 seconds a video, when videos are added."
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.4/breezy-update-0.41.4.zip",
- "sha256": "7e161d0f17fbbc30fba411abbad840a90418186157e806f7bd0438644e174706",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.41.4/BreezyVideoSetup-0.41.4.exe",
- "installer_sha256": "29d5291454493d38ff0930122f53cf710f838bfca81eb69d923022bc0d171fce"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.42.0/breezy-update-0.42.0.zip",
+ "sha256": "bfe76cea76f5f0e0ce1ef64524a2a7b6f877955b370bdb8166d8821676e4f6e7",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.42.0/BreezyVideoSetup-0.42.0.exe",
+ "installer_sha256": "c46cbc52ee5bbfd2213007dcaffe1e8ffcb105ff2422b0248cc1e1546a16d56b"
 }
