@@ -1,15 +1,13 @@
 {
- "version": "0.42.0",
+ "version": "0.42.1",
  "notes": [
-  "Enhance: the recommendation now comes from the video itself, not from the global Quality level. A deeper scan looks at pictures and sound from the whole video: noise, compression blocks, banding, how sharp it really is, light and colour, flicker, repeated frames, faces, and the sound's hiss, hum, distortion, wind and loudness. It recommends the best natural-looking result: AI is blended with the plain picture, faces are only restored when small and blurry, there's no sharpening on top of AI, and a little grain goes back after strong cleaning.",
-  "'Apply recommendation' gives the selected video its own settings ('Apply to all' does every scanned video). Selecting a video shows its settings, and anything you change there is for that video only. Videos without their own use the page settings. The list's new Settings column says which, and 'Use page settings' goes back.",
-  "Each reason is listed under the buttons (for example 'Noisy (4.2): AI noise removal at 40%').",
-  "The global Quality level still sets the page when you choose it, as a starting point.",
-  "'Adjust each video to its own scan automatically' is replaced by 'Videos without their own settings': the page settings (new default, so what you see is what runs) or their recommendation (handy for watch folders and pipelines).",
-  "The scan takes a little longer: 4-18 seconds a video, when videos are added."
+  "Enhance: new setting 'Recommend upscaling to': 4K (new default), 1440p, or twice the size at most (what 0.42.0 did). A 720p or 1080p video's recommendation now goes to 4K; the AI is still blended with a plain upscale so it looks natural.",
+  "Enhance: the output sizes 720p / 1080p / 1440p / 4K now mean the short side, so a portrait phone video set to 4K becomes 2160x3840 (it used to become 1215x2160).",
+  "Enhance and Stabilizer: when the graphics card's video encoder fails (for example 'return code -22' while the card's memory is full), the video is made again with the processor's encoder instead of failing. The error message now shows FFmpeg's reason, not only its last line.",
+  "Clearer update message: 'Breezy Video will now close, update, and restart. Do not manually restart Breezy Video.'"
  ],
- "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.42.0/breezy-update-0.42.0.zip",
- "sha256": "bfe76cea76f5f0e0ce1ef64524a2a7b6f877955b370bdb8166d8821676e4f6e7",
- "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.42.0/BreezyVideoSetup-0.42.0.exe",
- "installer_sha256": "c46cbc52ee5bbfd2213007dcaffe1e8ffcb105ff2422b0248cc1e1546a16d56b"
+ "update": "https://github.com/Brudeski/breezy-video/releases/download/v0.42.1/breezy-update-0.42.1.zip",
+ "sha256": "309f4b492ae263feb3ded7e202901a9b5a720090ab2d8c77570cd2ee745ddac0",
+ "installer": "https://github.com/Brudeski/breezy-video/releases/download/v0.42.1/BreezyVideoSetup-0.42.1.exe",
+ "installer_sha256": "100e7db48d82bf2669e1375ae0924853b7e5342fa3dc39bcc8f32a0df3fa9869"
 }
